@@ -1,0 +1,67 @@
+			body{font-family: "courier new";
+				padding:70px;
+
+			}
+			
+
+			input[type=text], input[type=password]{
+				width: 280px;
+				padding: 15px;
+				margin: 5px 0 22px 0;
+				background: #f1f1f1;
+				border:1px solid #f8f5f1;
+			    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+			    -moz-box-shadow: inset 0px 0px 1px #726959;
+			    -webkit-box-shadow:  inset 0px 0px 1px #b3a895; 
+			    box-shadow:  inset 0px 0px 1px #b3a895;
+			}
+
+			a{
+				text-decoration: none;
+				color: black;
+			}
+
+			hr {
+				border: 1px solid #f1f1f1;
+				margin-bottom:25px;
+			}
+
+			button{
+				background-color: #4CAF50;
+				padding: 14px;
+				margin: 8px 0;
+				border: none;
+				cursor: pointer;
+				opacity:0.9;
+
+				
+
+			}
+			button:hover{
+				opacity: 1;
+			}
+
+			.cancelbtn{
+				padding: 14px;
+				background-color: #f44336;
+
+			}
+			.cancelbtn, .signupbtn{
+				float:center;
+				width: 20%;
+		
+
+			}
+			.container{
+
+				padding:16px;
+				
+			}
+			form{
+				overflow: hidden;
+			}
+			label{
+				width:150px;
+				display: inline-block;
+				
+			}
