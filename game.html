@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Dela Victoria</title>
+	<style type="text/css">
+		html{
+ 			background-image: linear-gradient(black, green); 
+			padding:50pt;
+			background-repeat: no-repeat;
+			height: 100%;
+
+		}
+		.meow{
+			background-color: tan;
+			text-align: center;
+			width: 100%;
+			font-family: arial;
+			font-size: 19pt;
+			border-radius: 50px;
+
+
+		}
+		body{
+			border: 20px;
+			border-style: solid;
+			padding-top: 30px;
+			padding-bottom: 10pt;
+			padding-left: 20pt;
+			padding-right: 20pt;
+
+
+		}
+		
+		.cute{
+			margin-top:280pt;
+			margin-left: 280pt;
+
+		}
+		.mew{
+			color:white;
+			font-size: 20pt;
+		}
+		#lol { color: blue;
+	    border: 5px;
+	    border-radius: 20px;
+	    height: 35px;
+	    width: 200px;
+	    font-size:15px;
+	    background-color:white;
+	    font-family: arial;
+
+		}
+
+		#lol:hover{ background-color: lightblue;
+		    font-weight: bold;
+		    border:solid crimson;
+		    color: green;
+
+		}
+		#aw:hover{ background-color: lightblue;
+		    font-weight: bold;
+		    border:solid crimson;
+		    color: black;
+
+		}
+		#text{
+			color:white;
+			font-family: arial;
+		}
+		#answer{
+			color:white;
+			font-family: arial;
+		}
+		#user{
+			background-color: aqua;
+		    border: 8px;
+		    border-radius: 5px;
+		    font-size: 20px;
+		}
+
+
+	</style>
+</head>
+<body>
+	
+		<nav class="meow">
+		<h1><i> DELA VICTORIA'S GUESSING GAME.</i></h1>
+		</nav>
+		<p class="mew">Guess the number</p>
+	        <p class="mew">Click the button to generate a random integer for you to guess (1-100)</p>
+
+	        <button id="lol" onclick="document.getElementById('randomNum').innerHTML = randNum(1,100)">Generate random Integer</button>
+
+	        <p style="display: none" id="randomNum"></p>
+	        </br></br>
+	        <p id="text"></p>
+
+	        <input id="user" value=" " />
+
+	        <button id="aw" onclick="myFunction()">Check</button>
+
+	        <p id="answer"></p>
+		
+	
+</body>
+	<script>
+        function randNum(min, max) {
+            text = "A random integer has been generated";
+            document.getElementById("text").innerHTML = text;
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+
+        function myFunction() {
+            var user, voteable;                
+            var user = document.getElementById("user").value;
+            var rand = document.getElementById('randomNum').innerHTML;
+            user = Number(user);
+            if (user==0) {
+                voteable = "Missing guess parameter";
+            }
+            else {
+                if (isNaN(user)) {
+                    voteable = "Your guess is not a number";
+                }
+                else {
+                    if(user==rand){
+                        voteable="Congratulations - You are right";
+                    }
+                    else{
+                    voteable = (user < rand) ? "Your guess is too low" : "Your guess is too high";
+                    }
+                }
+            }
+            document.getElementById("answer").innerHTML = voteable;
+        }
+    </script>
+</html>
